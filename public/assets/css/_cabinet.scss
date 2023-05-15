@@ -1,0 +1,180 @@
+#cabinet{
+    padding-top: 0;
+    
+}
+.cabinet-menu{
+    display: flex;
+    list-style: none;
+    padding: 15px 0;
+    border: 1px solid #e2e1e1;
+    a{
+       color: $black; 
+       &:hover{
+        color: $purple;
+       }
+    }
+    li{
+        padding-left: 25px;
+    }
+}
+
+.cabinet-edit{
+    padding-top: 30px;
+    max-width: 450px;
+    margin: auto;
+    h2{
+        font-size: 21px;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+    .button{
+        margin-top: 30px;
+    }
+    .delete-btn{
+        background: transparent;
+        border: none;
+        color: $black;
+        font-size: 14px;
+        padding-top: 10px;
+    }
+}
+
+.cabinet-elan{
+    #tab-1{
+        display: block;
+    }
+}
+
+.cabinet{
+    #tab-1 {
+        display: block;
+    }
+    h3{
+        font-size: 17px;
+        color: $black;
+        margin-bottom: 5px;
+    }
+    .nav-tabs{
+        margin-top: 10px;
+    }
+    .profile-statistics-block{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .profile-statistics{
+        width: 32%;
+        border-radius: 8px;
+        padding: 20px;
+        position: relative;
+        background: #7750a1;
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: url('../images/wallet.svg');
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            background-position: top;
+        }
+        &:nth-child(2){
+            background: #6f64b0;
+           
+        }
+        &:nth-child(3){
+            background: #6987c1;
+        }
+    }
+    .profile-statistics-count{
+        font-size: 24px;
+        color: white;
+        margin-bottom: 0;
+    }
+    .profile-statistics-title{
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    .profile-statistics-link{
+        display: flex;
+        align-items: center;
+        color: white;
+        position: relative;
+        z-index: 1;
+        justify-content: space-between;
+    }
+    .profile-statistics-info{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+    }
+    .button{
+        background: white;
+        color: $purple;
+        min-width: 80px;
+    }
+    .table{
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.03);
+        border: 1px solid #f4f6f7;
+        border-radius: 7px;
+        thead th{
+            border: none;
+        }
+        table{
+            width: 100%;
+        }
+        td{
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 38px;
+            border-top: 1px solid #dee2e6b3;
+            img{
+                width: 20px;
+                margin-top: -6px;
+                margin-right: 3px;
+            }
+            button{
+                background: transparent;
+                color: $purple;
+                font-size: 17px;
+            font-weight: 500;
+            }
+        }
+        a{
+            color: $purple;
+        }
+    }
+}
+
+.nav-tabs{
+    margin-top: 50px;
+    li{
+        padding-left: 25px;
+        padding-bottom: 5px;
+    }
+    a{
+        color: $black;
+        &:hover{
+            color: $blue;
+        }
+    }
+    .active{
+        color: $blue;
+        font-weight: 500;
+    }
+}
+
+.tab-pane{
+    padding-top: 20px;
+    .tab-pane-empty{
+        font-size: 15px;
+        color: $black;
+        padding-left: 25px;
+    }
+}
+

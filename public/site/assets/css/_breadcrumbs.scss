@@ -1,0 +1,17 @@
+.breadcrumbs{
+    ul{
+        list-style: none;
+        display: flex;
+        margin-bottom: 0;
+    }
+    li{
+        color: rgba(133, 140, 147, 1);
+    }
+    a{
+        color: $black;
+        margin-right: 5px;
+        &:hover{
+            color:$purple;
+        }
+    }
+}

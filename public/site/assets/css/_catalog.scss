@@ -1,0 +1,225 @@
+.section-title{
+    .nice-select{
+        width: 145px;
+        border: 1px solid #dfe3e9;
+        border-radius: 7px;
+        height: 40px;
+        &.open, &:focus{
+            border: 1px solid #dfe3e9;
+        }
+        .list{
+            width: 100%;
+            
+        }
+        &::after{
+            width: 7px;
+            height: 7px;
+        }
+        
+    }
+}
+
+.rentacar-section{
+    padding: 0;
+
+    .card-block{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card{
+        box-shadow: 0 0 3px 2px rgb(201 199 199 / 55%);
+        width: 48.8%;
+        padding: 0;
+        background: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        height: 145px;
+        overflow: hidden;
+        margin-bottom: 24px;
+        
+        &:hover .card-header img{
+            transform: scale(1.1);
+        }
+    }
+    .card-header{
+        padding: 0;
+        overflow: hidden;
+        width: 145px;
+        height: 145px;
+        border-right: 2px solid #f7f5f5;
+        img{
+            transition: $transition;
+            width: 100%;
+        }
+    }
+    .card-body{
+        width: calc(100% - 145px);
+        padding: 10px;
+    }
+    .card-title{
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 0;
+        color: $black;
+    }
+    .card-description{
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        max-height: 50px;
+        font-size: 14px;
+        line-height: 18px;
+        color: $black;
+    }
+    .card-text{
+        font-size: 13px;
+        color: $purple;
+    }
+    .card-phone{
+        overflow: hidden;
+        white-space: nowrap;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        position: relative;
+        margin: 7px 0;
+        z-index: 20;
+        img{
+            width: 14px;
+            margin-right: 5px;
+        }
+        a{
+            color: #9b9b9b;
+            font-size: 14px;
+            margin-right: 5px;
+            &:hover{
+                color: $purple;
+            }
+        }
+    }
+    
+}
+
+#rentacar-catalog{
+    padding-top: 20px;
+
+    .rentacar-catalog-info{
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .rentacar-cover-photo{
+        height: 320px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .rentacar-catalog-bottom{
+        padding:20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background: rgb(87 98 155);
+    }
+    .rentacar-catalog-left{
+        width: 150px;
+        .button{
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            background: white;
+            color: $purple;
+            border-color: $purple;
+        }
+    }
+    .rentacar-catalog-right{
+        width: calc(100% - 170px);
+        display: flex;
+        flex-wrap: wrap;
+        &>div{
+            max-width: 50%;
+            width: 100%;
+        }
+    }
+    .rentacar-catalog-logo{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .rentacar-catalog-title{
+        font-size: 22px;
+        width: 100%;
+        color: white;
+    }
+    .rentacar-catalog-subtitle{
+        display: -webkit-box;
+        max-height: 50.4px;
+        font-size: 15px;
+        line-height: 19px;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        margin-bottom: 20px;
+        width: 100%;
+        color: white;
+    }
+    .rentacar-catalog-location{
+        font-size: 16px;
+        color: white;
+        img{
+            width: 20px;
+            height: 20px;
+            filter: invert(1) brightness(5);
+            margin-right: 5px;
+        }
+    }
+    
+}
+
+.rentacar-catalog-phone-link{
+    display: flex;
+    align-items: center;
+    a{
+        display: block;
+        font-size: 16px;
+        color: white;
+        margin-bottom: 7px;
+    }
+    img{
+        width: 20px;
+        height: 20px;
+        filter: invert(1) brightness(5);
+        margin-right: 8px;
+    }
+}
+.rentacar-catalog-time{
+    margin-top: 10px;
+    img{
+        width: 25px;
+        height: 25px;
+        filter: invert(1) brightness(5);
+        margin-right: 3px;
+    }
+    span{
+        font-size: 16px;
+        color: white;
+    }
+}

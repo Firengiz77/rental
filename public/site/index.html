@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/images/icon/favicon.svg">
+        <!-- select -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+        <!-- nice select -->
+        <link rel="stylesheet" href="assets/nice-select/nice-select.css"/>
+        <!-- swiper -->
+        <link rel="stylesheet" href="assets/swiper/swiper.min.css"/>
+        <!-- fancybox -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous">
+        <title>Rento.az</title>
+    </head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-left">
+                    <a href="tel:" ><img src="assets/images/phone.svg"/>+994509999999</a>
+                    <a href="mailto:" target="_blank"><img src="assets/images/envelope.svg"/>info@info.com</a>
+                </div>
+                <div class="header-top-right">
+                    <a href="wish-list.html">
+                        <img src="assets/images/heart.svg"/>
+                        Seçilmişlər
+                    </a>
+                    <a href="profile.html" class="home-login-btn">
+                        <img src="assets/images/user.svg"/>
+                        Giriş
+                    </a>
+                </div>
+            </div>            
+        </div>
+        <div class="header-menu">
+            <div class="container">
+                <div class="header-menu-left">
+                    <h2 class="logo">RENTO.AZ</h2>
+                    <ul>
+                        <li><a href=''>Bütün elanlar</a></li>
+                        <li><a href=''>Rent a car şirkətləri</a></li>
+                        <li><a href=''>Premium elanlar</a></li>
+                    </ul>
+                </div>
+                <a href="" class="button"><img src="assets/images/add.svg"/>Yeni elan</a>
+            </div>
+        </div>
+        <div class="header-filter">
+            <div class="container"></div>
+        </div>
+    </header>
+    <section id="filter">
+        <div class="container">
+            <form>
+                <div class="form-filter-top">
+
+                
+                    <div class="form-group">
+                        <label>Marka</label>
+                        <select placeholder="Marka" class="select">
+                            <option value="">Select a state...</option>
+                            <option value="Marka1">Marka1</option>
+                            <option value="Marka2">Marka2</option>
+                            <option value="Marka3">Marka3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Model</label>
+                        <select placeholder="Model" class="select">
+                            <option value="">Select a state...</option>
+                            <option value="Model1">Model1</option>
+                            <option value="Model2">Model2</option>
+                            <option value="Model3">Model3</option>  
+                        </select>
+                    </div>
+                    <div class="form-group form-radio-group form-input">
+                        <label>
+                            <input type="radio" name="formRadio1">
+                            <span class="form-checkmark">Hamısı</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="formRadio1">
+                            <span class="form-checkmark">Rent a car</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="formRadio1">
+                            <span class="form-checkmark">Şəxsi</span>
+                        </label> 
+                    </div>
+                    <div class="form-group">
+                        <label>Şəhər</label>
+                        <select placeholder="Şəhər" class="multiple-option">
+                            <option value="">Select a state...</option>
+                            <option value="seher1">seher1</option>
+                            <option value="seher2">seher2</option>
+                            <option value="seher3">seher3</option>  
+                        </select>
+                    </div>
+
+                    <div class="form-group form-multi-input">
+                        <div class="form-group">
+                            <label>Qiymət min.</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>maks.</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <select placeholder="AZN" class="select">
+                            <option value="">Select a state...</option>
+                            <option value="AZN">AZN</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ban növü</label>
+                        <select placeholder="Ban növü" class="multiple-option">
+                            <option value="">Select a state...</option>
+                            <option value="Avtobus">Avtobus</option>
+                            <option value="Dartqı">Dartqı</option>
+                            <option value="Furqon">Furqon</option>  
+                            <option value="Hetçbek">Hetçbek</option>
+                            <option value="Kabriolet">Kabriolet</option>
+                            <option value="Karvan">Karvan</option>
+                            <option value="Kupe">Kupe</option>
+                            <option value="Kvadrosikl">Kvadrosikl</option>
+                            <option value="Liftbek">Liftbek</option>
+                            <option value="Mikroavtobus">Mikroavtobus</option>
+                            <option value="Minivan">Minivan</option>
+                            <option value="Moped">Moped</option>
+                            <option value="Motosiklet">Motosiklet</option>
+                            <option value="Offroader/SUV">Offroader/SUV</option>
+                            <option value="Pikap">Pikap</option>
+                            <option value="Qolfkar">Qolfkar</option>
+                            <option value="Rodster">Rodster</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Universal">Universal</option>
+                            <option value="Van">Van</option>
+                            <option value="Yuk-masini">Yük maşını</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-multi-input">
+                        <div class="form-group">
+                            <label>İl min.</label>
+                            <select placeholder="min" class="select">
+                                <option value="">Select a state...</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>maks.</label>
+                            <select placeholder="max" class="select">
+                                <option value="">Select a state...</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-filter-middle">
+                    <div class="form-group">
+                        <label>Rəng</label>
+                        <select placeholder="Rəng" class="multiple-option">
+                            <option value="">Select a state...</option>
+                            <option value="Qırmızı">Qırmızı</option>
+                            <option value="Sarı">Sarı</option>
+                            <option value="Yaşıl">Yaşıl</option>  
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Yanacaq növü</label>
+                        <select placeholder="Yanacaq növü" class="multiple-option">
+                            <option value="">Select a state...</option>
+                            <option value="Benzin">Benzin</option>
+                            <option value="Dizel">Dizel</option>
+                            <option value="Qaz">Qaz</option>  
+                            <option value="Elektro">Elektro</option>
+                            <option value="Hibrid">Hibrid</option>
+                            <option value="Plug-in-hibrid">Plug-in Hibrid</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ötürücü</label>
+                        <select placeholder="Ötürücü" class="multiple-option">
+                            <option value="">Select a state...</option>
+                            <option value="Arxa">Arxa</option>
+                            <option value="Ön">Ön</option>
+                            <option value="Tam">Tam</option>  
+                        </select>
+                    </div>
+
+                    <div class="form-group form-multi-input">
+                        <div class="form-group">
+                            <label>Həcm min.</label>
+                            <select placeholder="min" class="select">
+                                <option value="">Select a state...</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>maks.</label>
+                            <select placeholder="max" class="select">
+                                <option value="">Select a state...</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sürətlər qutusu</label>
+                        <select placeholder="Sürətlər qutusu" class="multiple-option">
+                            <option value="">Select a state...</option>
+                            <option value="Mexaniki">Mexaniki</option>
+                            <option value="Avtomat">Avtomat</option>
+                            <option value="Robotlaşdırılmış">Robotlaşdırılmış</option>  
+                            <option value="Variator">Variator</option>  
+                        </select>
+                    </div>
+
+                    
+                    <div class="form-group form-multi-input">
+                        <div class="form-group">
+                            <label>Güc (a.g.) min.</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>maks.</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Yerlərin sayı</label>
+                        <select placeholder="Yerlərin sayı" class="multiple-option">
+                            <option value="">Select a state...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>  
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>  
+                            <option value="7">7</option>
+                            <option value="8+">8+</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-checkbox-group">
+                        <p>Avtomobilin təchizatı</p>
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Yüngül lehimli disklər</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">ABS</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Lyuk</span>
+                        </label> 
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Yağış sensoru</span>
+                        </label> 
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Mərkəzi qapanma</span>
+                        </label> 
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Park radarı</span>
+                        </label> 
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Kondisioner</span>
+                        </label> 
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Oturacaqların isidilməsi</span>
+                        </label> 
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Dəri salon</span>
+                        </label> 
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Ksenon lampalar</span>
+                        </label> 
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Arxa görüntü kamerası</span>
+                        </label> 
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Yan pərdələr</span>
+                        </label> 
+                        <label>
+                            <input type="checkbox" name="">
+                            <span class="form-checkmark">Oturacaqların ventilyasiyası</span>
+                        </label> 
+                    </div>
+                </div>
+            <div class="filter-bottom">
+                <div>Bugün <a href="">1871 yeni elan</a></div>
+                <div class="filter-btns">
+                    <input type="reset" value="Sıfırla">
+                    <button class="filter-btn">Daha çox filter</button>
+                    <button class="button">Elanları göstər</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </section>
+    
+    <section class="product-section">
+        <div class="section-title">
+            <div class="container">
+                <h3 class="title">Son Elanlar</h3>
+                <a href="" class="button">Bütün elanlar</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card-block">
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <i class="fal fa-heart"></i>
+                        </a>
+                        <!-- <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a> -->
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <!-- <i class="fal fa-heart"></i> -->
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a>
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <i class="fal fa-heart"></i>
+                        </a>
+                        <!-- <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a> -->
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <!-- <i class="fal fa-heart"></i> -->
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <!-- <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a> -->
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <i class="fal fa-heart"></i>
+                        </a>
+                        <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a>
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <!-- <i class="fal fa-heart"></i> -->
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a>
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-title">
+            <div class="container">
+                <h3 class="title">Premium Elanlar</h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card-block">
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <i class="fal fa-heart"></i>
+                        </a>
+                        <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a>
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <!-- <i class="fal fa-heart"></i> -->
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a>
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <i class="fal fa-heart"></i>
+                        </a>
+                        <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a>
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <!-- <i class="fal fa-heart"></i> -->
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a>
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <i class="fal fa-heart"></i>
+                        </a>
+                        <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a>
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="" class="card-link"></a>
+                    <div class="card-header">
+                        <div class="card-img">
+                            <img src="assets/images/img.jpg"/>
+                        </div>
+                        <a href="" class="wish-list-icon">
+                            <!-- <i class="fal fa-heart"></i> -->
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <a href="" class="premium-icon"><img src="assets/images/premium.png"/></a>
+                        <span class="card-label">Rent a car</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">63000 AZN</div>
+                        <div class="card-name">Geely Tugella</div>
+                        <div class="card-attributes">
+                            <span>2022</span> ,
+                            <span> 2.0 L</span>
+                        </div>
+                        <div class="card-date"><span>Bakı</span>, <span>17.01.2023 11:17</span></div>
+                    </div>
+                </div>
+                <div class="premium-card">
+                    <img src="assets/images/premium.png"/>
+                    <p>Öz elanını Premium et!</p>
+                    <span>1 gün - 10 AZN</span>
+                    <button class="button">Premium et</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <footer>
+    <div class="section-advert">
+        <div class="container">
+            <a href="">Reklam yerləşdirin</a>
+            <div class="social-links">
+                <a href="" target="_blank"><img src="assets/images/facebook.svg"/></a>
+                <a href="" target="_blank"><img src="assets/images/instagram.svg"/></a>
+                <a href="mailto:" target="_blank"><img src="assets/images/envelope.svg"/>info@info.com</a>
+                <a href="tel:" target="_blank"><img src="assets/images/phone.svg"/>+994509999999</a>
+            </div>
+        </div>
+    </div>
+   <div class="footer-links">
+    <div class="container">
+        <a href="">Mercedes</a>
+        <a href="">Rolls-Royse</a>
+        <a href="">BMW</a>
+        <a href="">Hyundai</a>
+        <a href="">Audi</a>
+        <a href="">Mercedes</a>
+        <a href="">Rolls-Royse</a>
+        <a href="">BMW</a>
+        <a href="">Lexus</a>
+        <a href="">Maserati</a>
+        
+        <a href="">Hyundai</a>
+        <a href="">Audi</a>
+        <a href="">Lexus</a>
+        <a href="">Maserati</a>
+        <a href="">Mercedes</a>
+        <a href="">Mercedes</a>
+        <a href="">Rolls-Royse</a>
+        <a href="">BMW</a>
+        <a href="">Rolls-Royse</a>
+        <a href="">BMW</a>
+        <a href="">Hyundai</a>
+        <a href="">Audi</a>
+        <a href="">Mercedes</a>
+        <a href="">Rolls-Royse</a>
+        <a href="">BMW</a>
+        <a href="">Lexus</a>
+        <a href="">Maserati</a>
+        <a href="">Mercedes</a>
+        <a href="">Rolls-Royse</a>
+        <a href="">Mercedes</a>
+        <a href="">Rolls-Royse</a>
+        <a href="">BMW</a>
+        <a href="">BMW</a>
+        <a href="">Hyundai</a>
+        <a href="">Audi</a>
+        <a href="">Lexus</a>
+        <a href="">Maserati</a>
+    </div>
+   </div>
+    <div class="copyright">
+        <div class="container">
+            <p>2023 Digital Classifieds MMC.</p>
+            <p>Saytın Administrasiyası reklam bannerlərinin və yerləşdirilmiş elanların məzmununa görə məsuliyyət daşımır.</p>
+        </div>
+    </div>
+    
+   </footer>
+
+   <!-- Premium modal box -->
+   <div id="premium-modal-box">
+        <div class="modal-box">
+            <div class="modal-close"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <p class="modal-title">Premium et</p>
+                    <button class="modal-close-btn"><img src="assets/images/add.svg"/></button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-text">Sizin elan saytın ana səhifəsində xüsusi ayrılmış blokda görünəcək və aktivlik müddətinin sonunadək orada qalacaq.</p>
+                    <p class="modal-text">Xidmətin dəyəri - <span>5 AZN-dən.</span></p>
+                    <form>
+                        <div class="form-group">
+                            <label>Sizin elanınızın nömrəsi</label>
+                            <input type="text" />
+                            <p class="error-text">Bu nömrəli elan tapılmadı</p>
+                        </div>
+                        <div class="form-group">
+                            <button class="button">Davam etmək</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <!-- Login modal box -->
+    <div id="login-modal-box">
+        <div class="modal-box">
+            <div class="modal-close"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <p class="modal-title">RENTO.AZ</p>
+                    <button class="modal-close-btn"><img src="assets/images/add.svg"/></button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-body-title">Öz elanlarınıza baxmağın, onları redaktə və bərpa etməyin rahat yolu</p>
+                    <div class="modal-btns">
+                        <button class="button">Telefon nömrəsi ilə giriş</button>
+                        <button class="button">Biznes hesabınıza giriş</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phone modal box -->
+    <div id="phone-login-modal-box">
+        <div class="modal-box">
+            <div class="modal-close"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <p class="modal-title">RENTO.AZ</p>
+                    <button class="modal-close-btn"><img src="assets/images/add.svg"/></button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-body-title">Şəxsi kabinetə giriş</p>
+                    <form>
+                        <div class="form-group">
+                            <label>Telefon nömrəsi</label>
+                            <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" value="">
+                        </div>
+                        <div class="form-group">
+                            <button class="button">Sms kod göndərilsin</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SMS Code modal box -->
+    <div id="sms-code-modal-box">
+        <div class="modal-box">
+            <div class="modal-close"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <p class="modal-title">RENTO.AZ</p>
+                    <button class="modal-close-btn"><img src="assets/images/add.svg"/></button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-body-title">Nömrənin təsdiqlənməsi</p>
+                    <p class="modal-text">(050) 000-00-00 nömrəsinə sms kod göndərildi</p>
+                    <form>
+                        <div class="form-group">
+                            <label>SMS kod</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <button class="button">Sms kod yenidən göndərilsin</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business modal box -->
+    <div id="business-login-modal-box">
+        <div class="modal-box">
+            <div class="modal-close"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <p class="modal-title">RENTO.AZ</p>
+                    <button class="modal-close-btn"><img src="assets/images/add.svg"/></button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-body-title">Şəxsi kabinetə giriş</p>
+                    <form>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="number" />
+                        </div>
+                        <div class="form-group">
+                            <label>Şifrə</label>
+                            <input type="password" />
+                            <button class="forgot-pass">Şifrəni unutdum</button>
+                        </div>
+                        <div class="form-group">
+                            <button class="button">Giriş</button>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business forgot password modal box -->
+    <div id="business-forgot-modal-box">
+        <div class="modal-box">
+            <div class="modal-close"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <p class="modal-title">RENTO.AZ</p>
+                    <button class="modal-close-btn"><img src="assets/images/add.svg"/></button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-body-title">Şifrənin yenilənməsi</p>
+                    <p class="modal-text">E-mail ünvanı daxil edin. E-mail ünvanınıza parolun bərpası üçün təlimatlar göndəriləcək.</p>
+                    <form>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="number" />
+                        </div>
+                        <div class="form-group">
+                            <button class="button">Göndər</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+    <!-- input mask -->
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <!-- nice select -->
+    <script src="assets/nice-select/jquery.nice-select.min.js"></script>
+    <!-- swiper -->
+    <script src="assets/swiper/swiper.min.js"></script>
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

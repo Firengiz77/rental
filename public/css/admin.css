@@ -1,0 +1,95 @@
+.voyager .navbar .navbar-header .navbar-brand, .voyager .navbar.navbar-default .navbar-header .navbar-brand{
+    background: #252B36 !important;
+    border-bottom: 1px solid #ffffff12;
+}
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top{
+    background: #252B36 !important;
+    border-bottom: 1px solid #ffffff12;
+}
+.app-container.expanded .content-container .side-menu{
+    background: #252B36 !important;
+}
+.voyager .navbar.navbar-default>.container-fluid:after{
+   display:none;
+}
+.voyager .navbar.navbar-default>.container-fluid:after{
+    display:none;
+}
+.voyager .navbar.navbar-default>.container-fluid:after, .voyager .navbar>.container-fluid{
+    border-bottom: none;
+}
+.sidebar-section-body {
+    position: relative;
+    padding: var(--sidebar-section-padding-y) var(--sidebar-section-padding-x);
+}
+@media screen and (min-width: 1024px){
+    .app-container.expanded .content-container .side-menu{
+        width:300px;
+    }
+
+    .app-container .content-container .side-menu:hover{
+        width:300px;
+    }
+    .app-container.expanded .side-body{
+        margin-left:300px;
+    }
+    nav.navbar.navbar-default.navbar-fixed-top.navbar-top{
+        height:63px;
+    }
+    .app-container .content-container .side-menu .navbar-header .navbar-brand{
+        height:63px;
+    }
+    .app-container.expanded .content-container .navbar-top{
+        padding-left:300px;
+    }
+}
+
+.app-container.expanded .content-container .side-menu .navbar-nav li a .title{
+    color: white;
+}
+.app-container .content-container .side-menu .navbar-nav li a .icon{
+    color:white;
+}
+
+.voyager .side-menu.sidebar-inverse .navbar li>a:hover{
+    background:rgba(255,255,255, 0.15);
+}
+
+a, li, span,h1,h2,h3,h4,h5,h6,th,td,p,button,div{
+    font-family:Inter !important;
+}
+
+.btn.btn-primary{
+    background: #252B36 !important;
+    border-color: #252B36 !important;
+}
+.voyager .breadcrumb a{
+    color: #252B36;
+}
+
+.text-uppercase.fs-sm.lh-sm.opacity-50.sidebar-resize-hide{
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.btn.btn-sm.btn-danger.pull-right.delete{
+background:#EF4444;
+}
+.voyager .btn.btn-success{
+    background: #252B36 !important;
+}
+.voyager .btn.btn-danger{
+    background: #EF4444 !important;
+
+}
+
+.voyager .pagination .active span, .voyager .pagination .active>a, .voyager .pagination .active>a:focus, .voyager .pagination .active>a:hover, .voyager .pagination .active>span:focus, .voyager .pagination .active>span:hover{
+    background: #252B36 !important;
+}
+.btn-link, .checkbox label, .checkbox-inline, .radio label, .radio-inline, label{
+    font-weight:500;
+}
+#files li .file_link.selected, #files li .file_link:hover{
+    background: #252B36!important;
+    border-color: #252B36;
+}
