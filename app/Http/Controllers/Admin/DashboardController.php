@@ -95,9 +95,9 @@ class DashboardController extends Controller
                     'password'=>\Hash::make($request->password)
             ]);
 
-                \DB::table('password_resets')->where([
+            \DB::table('password_resets')->where([
                     'email'=>$request->email
-                ])->delete();
+            ])->delete();
 
             toastr()->success('Your password has been changed successfully');
                 return redirect()->route('index')->with('verifiedEmail',$request->email);
@@ -105,7 +105,7 @@ class DashboardController extends Controller
     }
 
     public function forgot_password(Request $request){
-        
+
         $request->validate([
             'email'=>'required'
         ]);
