@@ -63,13 +63,12 @@ class DashboardController extends Controller
         $data->name = $request->name;
         $data->email = $request->email;
         $data->phone1 = $request->phone1;
-        $data->password = Hash::make($request->password);
+        $data->inform = $request->inform;
         $data->save();
         toastr()->success('Inform Changed successfullt');
         return redirect()->back();
 
     }
-
 //    email gonderilen yerin functionlari
   
     public function update_password(Request $request){
@@ -91,6 +90,7 @@ class DashboardController extends Controller
             return redirect()->route('index');
             }
             else{
+
              User::where('email',$request->email)->update([
                     'password'=>\Hash::make($request->password)
             ]);
@@ -129,6 +129,8 @@ class DashboardController extends Controller
         return view('admin.pages.password')->with(['token'=>$token,'email'=>$request->email]);
     }
 
+
+    
 
 
 

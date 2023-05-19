@@ -284,7 +284,7 @@
         <div class="container">
             <div class="card-block">
                 @foreach($rentalItems as $item)
-                    @php($images = json_decode($item->images))
+                    @php($images = json_decode($item->images,true))
                     <div class="product-card">
                         <a href="{{route('car.index',[
 	                                'car_model' => $item->carModel->slug,
@@ -294,19 +294,28 @@
                             <div class="card-img">
                                 @foreach($images as $image)
                                     @if($loop->first)
-                                        <img src="{{Voyager::image($image)}}"/>
+                                        <img src="{{ Voyager::image($image) }}" />
                                     @endif
                                 @endforeach
                             </div>
-                            <a href="{{'s'}}" class="wish-list-icon">
-                                <i class="fal fa-heart"></i>
+                            <a onclick="addtocart({{ $item->id }})" class="wish-list-icon">
+                                @if(auth()->check())
+                                @php($carts =  App\Wishlist::where('user_id',Auth::id())->where('rental_item_id',$item->id)->first())
+                                @else
+                                @php($carts =  \Cart::get($item->id))
+                             @endif
+                                    @if($carts === NULL)
+                                    <i class="fal fa-heart"></i>
+                                    @else
+                                    <i class="fas fa-heart"></i>
+                                    @endif
                             </a>
                             <!-- <a href="" class="premium-icon"><img src="{{asset('site')}}/assets/images/premium.png"/></a> -->
                             <span class="card-label">Rent a car</span>
                         </div>
                         <div class="card-body">
-                            <div class="card-price">{{$item->price}} AZN</div>
-                            <div class="card-name">{{$item->carModel->brand->name}} {{$item->carModel->name}}</div>
+                            <div class="card-price">{{$item->price}} {{ $item->price_value }}</div>
+                            <div class="card-name">{{$item->carModel->brand->name }} {{$item->carModel->name}} </div>
                             <div class="card-attributes">
                                 <span>{{$item->year}}</span> ,
                                 <span> {{$item->engine}} L</span>

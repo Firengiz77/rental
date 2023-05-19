@@ -75,7 +75,7 @@
                             </div>
                             <div>
                                 <span class="product-properties-name">Ban növü</span>
-                                <span class="product-properties-value">{{$rentalItem->type}}</span>
+                                <span class="product-properties-value">{{ $rentalItem->types->name }}</span>
                             </div>
                             <div>
                                 <span class="product-properties-name">Rəng</span>
@@ -110,20 +110,19 @@
                         </div>
                         <hr/>
                         <div class="product-extras">
-                            <span>Yüngül lehimli disklər</span>
-                            <span>ABS</span>
-                            <span>Yağış sensoru</span>
-                            <span>Mərkəzi qapanma</span>
-                            <span>Kondisioner</span>
-                            <span>Oturacaqların isidilməsi</span>
-                            <span>Dəri salon</span>
-                            <span>Yan pərdələr</span>
+
+                         @foreach ($features as $feature)
+                               @if($feature->id ==in_array($feature->id,$rentalItem->features()->pluck('id')->toArray()))
+                            <span>{{ $feature->name }}</span>
+                               @endif
+                        @endforeach
+
                         </div>
                         <hr/>
                         <div class="product-actions">
                             <div>
-                                <button>Düzəliş et</button>
-                                <button>Elanı sil</button>
+                                <button class="edit-btn">Düzəliş et</button>
+                                <button class="remove-btn">Elanı sil</button>
                             </div>
                             <span>Elanın nömrəsi: {{$rentalItem->id}}</span>
                         </div>
@@ -131,7 +130,7 @@
                 </div>
                 <div class="product-right">
                     <div class="product-sidebar-1" >
-                        <p class="product-price">{{$rentalItem->price}} AZN</p>
+                        <p class="product-price">{{$rentalItem->price}} {{ $rentalItem->price_value }}</p>
                         <hr/>
                         <div class="product-owner-info">
                             <div class="product-owner-icon">
@@ -392,4 +391,70 @@
         </div>
     </section>
     <!-- Single page end -->
+
+
+
+
+
+
+
+
+     
+    <!-- Elanin silinmesi üçün modal box -->
+    <div id="remove-modal-box">
+        <div class="modal-box">
+            <div class="modal-close"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <p class="modal-title">RENTO.AZ</p>
+                    <button class="modal-close-btn"><img src="{{ asset('/site/assets/images/add.svg') }}"/></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('car.delete_item',['rental_item' => $rentalItem->id]) }}" method="post">
+                        @csrf
+                        <p class="modal-body-title">Şəxsiyyətinizi təsdiqləyin</p>
+                        <p class="modal-body-desc">Davam etmək üçün elanınızın PIN-şifrəsini qeyd edin. PIN-şifrəni, elan saytda dərc edilərkən Rento.az-dan Sizə göndərilən məktubdan götürə bilərsiniz.</p>
+                        <div class="form-group">
+                            <label>Elanın PIN-şifrəsi:</label>
+                            <input type="number" name="pincode"/>
+                        </div>
+                        <div class="modal-btns">
+                            <button class="button" type="submit">Təsdiq et</button>
+                        </div>
+                        <button class="forgot-btn">PIN-şifrəni unutmusuz?</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Elanin düzəliş edilməsi üçün modal box -->
+    <div id="edit-modal-box">
+        <div class="modal-box">
+            <div class="modal-close"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <p class="modal-title">RENTO.AZ</p>
+                    <button class="modal-close-btn"><img src="{{ asset('/site/assets/images/add.svg') }}"/></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="{{ route('car.redirect_update_item',['rental_item' => $rentalItem->id]) }}">
+                        @csrf
+                        <p class="modal-body-title">Şəxsiyyətinizi təsdiqləyin</p>
+                        <p class="modal-body-desc">Davam etmək üçün elanınızın PIN-şifrəsini qeyd edin. PIN-şifrəni, elan saytda dərc edilərkən Rento.az-dan Sizə göndərilən məktubdan götürə bilərsiniz.</p>
+                        <div class="form-group">
+                            <label>Elanın PIN-şifrəsi:</label>
+                            <input type="number" name="pincode"/>
+                        </div>
+                        <div class="modal-btns">
+                            <button class="button" type="submit">Təsdiq et</button>
+                        </div>
+                        <button class="forgot-btn">PIN-şifrəni unutmusuz?</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 @endsection

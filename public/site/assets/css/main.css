@@ -207,13 +207,20 @@ header .header-top-right {
   display: flex;
   position: relative;
 }
-header .home-login-btn {
+
+
+header .home-login-btn ,
+header .home-login-btn2 {
   position: relative;
 }
-header .home-login-btn:hover .header-dropdown-menu {
+header .home-login-btn:hover .header-dropdown-menu,
+header .home-login-btn2:hover .header-dropdown-menu {
   opacity: 1;
   visibility: visible;
 }
+
+
+
 header .header-dropdown-menu {
   position: absolute;
   background: white;

@@ -186,9 +186,9 @@ function addImage (input){
     right.className = 'rotate-right';
     remove.className = 'remove-img';
     productActions.classList = 'product-img-actions';
-    remove.src = ('assets/images/close.png');
-    left.src = ('assets/images/rotate.png');
-    right.src = ('assets/images/rotate.png');
+    remove.src = ('/site/assets/images/close.png');
+    left.src = ('/site/assets/images/rotate.png');
+    right.src = ('/site/assets/images/rotate.png');
 
     productActions.appendChild(left);
     productActions.appendChild(right);

@@ -28,8 +28,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Şifrə</label>
-                    <input type="password" placeholder="*********"  id="phoneNumber" name="password"/>
+                    <label>İnformasiya</label>
+                     <textarea id="" cols="50" rows="10" name="inform" style="height:100px">{{ $user->inform }}</textarea>
                 </div>
            
                 <div class="form-group">

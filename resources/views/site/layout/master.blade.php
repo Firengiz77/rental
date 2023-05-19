@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- CSS -->
     <link rel="stylesheet" href="{{asset('site')}}/assets/css/main.css">
     <!-- Bootstrap -->
@@ -21,6 +22,25 @@
     <!-- fancybox -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous">
     <title>Rento.az</title>
+
+
+
+      {{-- alertify css --}}
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+  <!-- Default theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+
+  
+  <!-- Semantic UI theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+  <!-- Bootstrap theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+
+
+
+
+
+
     <style>
         .product-card .wish-list-icon{
             z-index:100;
@@ -153,7 +173,6 @@
                     </div>
                     <div class="form-group">
                         <button class="button">Giriş</button>
-
                     </div>
                 </form>
             </div>
@@ -191,6 +210,59 @@
 </div>
 
 <!-- Scripts -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script>
+    function addtocart(getid) {
+      let lang = window.location.href.split('/')[3];
+      $.get("/add_to_cart/" + getid,
+          {
+              id: getid,
+          },
+          function (data, status) {
+			  $('.count23').html(data.count);
+           //   console.log($('.wish-list-icon').html().trim());
+           
+            //   if($('.wish-list-icon').html().trim() === '<i class="fal fa-heart"></i>'){
+            //   console.log('qirmizi');
+            //    document.getElementsByClassName('wish-list-icon')[0].html('<i class="fas fa-heart"></i>');
+            //   }
+            //    else{
+            //       console.log('ici bos');
+            //    $('.wish-list-icon').innerHTML = '<i class="fal fa-heart"></i>';
+            //   }
+            
+             // $(".wish-list-icon").text($(this).text());
+              alertify.set('notifier','position', 'bottom-right');
+              alertify.notify(data.message,'custom', 2);
+          });
+  }
+
+</script>
+
+
+<script>
+	function remove_from_cart(getid) {
+	   let lang = window.location.href.split('/')[3];
+	   $.get("/remove_from_cart/" + getid,
+		   {
+			   id: getid,
+		   },
+		   function (data, status) {
+			   $('#wishlist12').html(data.html);
+			   $('.count').html(data.count);
+		   
+			   alertify.set('notifier','position', 'bottom-right');
+			   alertify.notify('Səbətdən Silindi','custom', 2);
+		   });
+   }
+
+</script>
+
+
+
+
+
+
 <!-- Jquery -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <!-- bootstrap -->

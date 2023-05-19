@@ -10,10 +10,28 @@
                     <img src="{{asset('site')}}/assets/images/heart.svg"/>
                     Seçilmişlər
                 </a>
-                <a href="profile.html" class="home-login-btn">
+
+                @if(auth()->check())
+                <div class="home-login-btn2">
+                    <a href="{{ route('user.cabinet') }}" >
+                        <img src="{{ asset('/site/assets/images/user.svg') }}"/>
+                        Profile
+                    </a>
+                    <ul class="header-dropdown-menu">
+                        <li><a href="{{ route('user.cabinet') }}">Şəxsi kabinet</a></li>
+                        <li><a href="{{ route('user.logout') }}"> Çıxış </a> </li> 
+                    </ul>
+
+                </div>
+
+                @else
+                <a href="" class="home-login-btn">
                     <img src="{{asset('site')}}/assets/images/user.svg"/>
                     Giriş
                 </a>
+                @endif
+
+
             </div>
         </div>
     </div>
@@ -23,11 +41,11 @@
                 <h2 class="logo"><a style="color:white" href="/">RENTO.AZ</a></h2>
                 <ul>
                     <li><a href="{{route('catalog.index')}}">Bütün elanlar</a></li>
-                    <li><a href=''>Rent a car şirkətləri</a></li>
+                    <li><a href="{{ route('avtosalonlar') }}" >Rent a car şirkətləri</a></li>
                     <li><a href="{{route('catalog.premiums')}}">Premium elanlar</a></li>
                 </ul>
             </div>
-            <a href="" class="button"><img src="{{asset('site')}}/assets/images/add.svg"/>Yeni elan</a>
+            <a href="{{ route('yeni_elan') }}" class="button"><img src="{{asset('site')}}/assets/images/add.svg"/>Yeni elan</a>
         </div>
     </div>
     <div class="header-filter">

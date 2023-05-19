@@ -26,11 +26,17 @@
                                     @endif
                                 @endforeach
                             </div>
-                            <a href="{{route('car.index',[
-	                                'car_model' => $item->carModel->slug,
-	                                'rental_item' => $item->id
-	                            ])}}" class="wish-list-icon">
-                                <i class="fal fa-heart"></i>
+                            <a onclick="addtocart({{ $item->id }})" class="wish-list-icon">
+                                @if(auth()->check())
+                                @php($carts =  App\Wishlist::where('user_id',Auth::id())->where('rental_item_id',$item->id)->first())
+                                @else
+                                @php($carts =  \Cart::get($item->id))
+                             @endif
+                                    @if($carts === NULL)
+                                    <i class="fal fa-heart"></i>
+                                    @else
+                                    <i class="fas fa-heart"></i>
+                                    @endif
                             </a>
                             <!-- <a href="" class="premium-icon"><img src="{{asset('site')}}/assets/images/premium.png"/></a> -->
                             <span class="card-label">Rent a car</span>
